@@ -27,8 +27,32 @@ let myFunction = function(){            // declaration  of function
             console.log("hello shubham");
 }
 
-console.log(typeof null);  // datatype object aayega null ka 
+// console.log(typeof null);  // datatype object aayega null ka 
 
-console.log(typeof hero);    // datatype object aayega 
+// console.log(typeof hero);    // datatype object aayega 
 
-console.log(typeof myFunction);  // function aayega 
+// console.log(typeof myFunction);  // function aayega 
+
+//*******************TYPES OF MEMORY*******************************
+/* 
+   TWO TYPES OF MEMORY 
+   1. stack memory  --> used for primitive data types     isme ek copy milti h 
+   2. heap memory --> used for non-primitive data types     isme original value ka reference milta h mtlb jo bhi change krenge wo original value me change hoga 
+*/
+
+let myYoutubeName = "hiteshchowdhary"
+let anotherName = myYoutubeName
+anotherName="chaiaurcode"
+
+// console.log(myYoutubeName);   hiteshchowdhary
+// console.log(anotherName);      chaiaurcode
+
+let userOne = {
+        email: "sjha3@gmail.com",
+        upi:"user.sjha"
+}
+let userTwo = userOne
+userTwo.email="1123@google.com"
+
+console.log(userOne.email)
+console.log(userTwo.email)
