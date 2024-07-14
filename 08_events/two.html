@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code </h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best teacher hitesh chowdhary"
+    }
+    const name = function() {
+        console.log("hi shubham");
+    }
+    const changeMe = setTimeout(changeText,4000)
+    // setInterval(name,2000)  // bas reference denge or ye bhi kam krega 
+    
+    
+    document.querySelector('#stop').
+    addEventListener('click',function(){
+        clearInterval(changeMe)
+        console.log("stopped")
+    })
+
+
+    
+
+</script>
+</html>
