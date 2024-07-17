@@ -29,8 +29,8 @@ const promiseThree = new Promise(function(resolve, reject){
     }, 1000)
 })
 
-promiseThree.then(function(user){
-    console.log(user);
+promiseThree.then(function(user){             // resolve ke ander jo bhi parameter pass krenge wo yaha mil jayega 
+    console.log(user);          // o/p = {username: "Chai", email: "chai@example.com"}
 })
 
 
@@ -38,11 +38,11 @@ promiseFour
 .then((user) => {
    console.log(user);
    return user.username
-}).then((username) => {
+}).then((username) => {                 // resolve wala part .then me aayega  
    console.log(username);
-}).catch(function(error){
+}).catch(function(error){           // reject wala part .catch me aayega 
    console.log(error);
-}).finally(() => console.log("The promise is either resolved or rejected"))
+}).finally(() => console.log("The promise is either resolved or rejected"))    // finally ko default man skte h ye hmesha execute hoga 
 
 
 const promiseFive = new Promise(function(resolve, reject){
@@ -56,7 +56,7 @@ const promiseFive = new Promise(function(resolve, reject){
     }, 1000)
 });
 
-async function consumePromiseFive(){
+async function consumePromiseFive(){        // async await thora wait krta h kam ke hone ka warna wahi error de deta h 
     try {
         const response = await promiseFive
         console.log(response);
@@ -87,7 +87,7 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 .then((data) => {
     console.log(data);
 })
-.catch((error) => console.log(error))
+.catch((error) => console.log(error))       // ye sbse pehle aa jayega o/p me 
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
