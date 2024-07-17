@@ -87,7 +87,7 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 .then((data) => {
     console.log(data);
 })
-.catch((error) => console.log(error))       // ye sbse pehle aa jayega o/p me 
+.catch((error) => console.log(error))       // ye sbse pehle aa jayega o/p me  kyuki fetch se microtask queue ya priority queue conect rhta  h to wo sbse pehle execute hoga 
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
