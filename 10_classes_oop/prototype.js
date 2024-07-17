@@ -3,7 +3,7 @@
 
 // console.log(myName.trueLength);
 
-
+// this mtlb current execution context 
 let myHeros = ["thor", "spiderman"]
 
 
